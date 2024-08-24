@@ -1,0 +1,38 @@
+#IdCargando {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #012C56;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.titulo_home {
+  color: white;
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.titulo_home strong {
+  color: rgb(255, 183, 27);
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}

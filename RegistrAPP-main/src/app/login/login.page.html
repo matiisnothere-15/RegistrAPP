@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <h1 class="titulo_login">Reg<strong>i</strong>str<strong>App</strong></h1>
+    </div>
+  </ion-toolbar>
+  <ion-progress-bar type="indeterminate" id="cargando" style="display: none;"></ion-progress-bar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Estructura de la pagina de Login -->
+  <form (ngSubmit)="validarDatos()">
+    <div class="inputs">
+      <ion-list>
+        <ion-item class="usuario">
+          <ion-input [(ngModel)]="nombre" labelPlacement="stacked" type="email">
+            <div slot="label">Correo electrónico <ion-text color="danger" id="errorUser"></ion-text></div>
+          </ion-input>
+        </ion-item>
+        <br>
+        <ion-item class="password">
+          <ion-input [(ngModel)]="password" labelPlacement="stacked" type="password" color="tertiary">
+            <div slot="label">Contraseña <ion-text color="danger" id="errorPass"></ion-text></div>
+          </ion-input>
+        </ion-item>
+        <br>
+      </ion-list>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-button class="btn_ingresar" type="submit" expand="full">Ingresar</ion-button>
+        </ion-item>
+        <br><br>
+        <ion-item>
+          <ion-button class="btn_recuperar" (click)="redirigirRecuperar()" fill="clear">Recuperar cuenta</ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </form>
+
+  <div class="footer">
+    <img src="../../assets/icon/acreditado.jpg" alt="Acreditado por 7 años" width="230px">
+  </div>
+
+</ion-content>

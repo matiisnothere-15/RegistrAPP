@@ -1,0 +1,39 @@
+ <ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <h1 class="titulo_restablecer">Reg<strong>i</strong>str<strong>App</strong></h1>
+    </div>
+  </ion-toolbar>
+  <ion-progress-bar type="indeterminate" id="restablecerCargando"></ion-progress-bar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="subtitulo">
+    <h2 style="font-weight: bold;">Restablecer cuenta</h2>
+  </div>
+  <!-- Estructura de la pagina de Restablecer contrasena -->
+  <form (ngSubmit)="recuperarUser()">
+    <div class="inputs">
+      <ion-list>
+        <ion-item class="nombreUser">
+          <ion-input [(ngModel)]="usuario" labelPlacement="stacked" type="email">
+            <div slot="label">Correo electrónico <ion-text color="danger" id="errorUserRecuperar"></ion-text></div>
+          </ion-input>
+        </ion-item>
+        <br>
+      </ion-list>
+      <ion-list lines="none">
+        <br>
+        <ion-item>
+          <ion-button class="btn_recuperar" type="submit" expand="full">Restablecer contraseña</ion-button>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-button class="btn_volver" (click)="redirigirLogin()" fill="clear">Volver atrás</ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </form>
+
+</ion-content>

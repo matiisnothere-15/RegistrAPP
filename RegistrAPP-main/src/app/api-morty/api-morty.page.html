@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item color="transparent" class="navbar_home" lines="none">
+      <h1 class="titulo_home">Reg<strong>i</strong>str<strong>App</strong></h1>
+      <ion-button fill="clear" slot="end" (click)="redirigirLogin()">
+        <ion-icon name="log-out-outline" size="large" style="color: white; padding-top: 5px;"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Se activa cuando esta obteniendo la información de la api -->
+  <div id="IdCargando">
+    <span class="loader"></span>
+  </div>
+
+  <!-- Personajes de Rick and Morty -->
+  <div id="contenido" style="display: block;">
+    <ion-list lines="full" *ngFor="let persona of personajes">
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="{{ persona.image }}" />
+        </ion-avatar>
+        <ion-label>{{ persona.name }}</ion-label>
+      </ion-item>
+  
+    </ion-list>
+  </div>
+
+</ion-content>

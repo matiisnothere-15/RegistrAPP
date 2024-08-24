@@ -1,0 +1,52 @@
+/* Estilos de la pagina de Restablecer contrasena */
+ion-content::part(background) {
+    background: white;
+}
+
+.header {
+    background-color: #012C56;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_restablecer {
+    color: white;
+    font-size: 45px;
+}
+
+.titulo_restablecer strong {
+    color: rgb(255, 183, 27);
+    font-weight: bold;
+}
+
+.subtitulo {
+    color: black;
+    text-align: center;
+}
+
+.inputs {
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_recuperar {
+    --background: rgb(255, 183, 27);
+    --color: white;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    width: 100%;
+}
+
+.btn_volver {
+    width: 100%;
+    text-decoration: underline;
+}
+
+#restablecerCargando {
+    display: none;
+}

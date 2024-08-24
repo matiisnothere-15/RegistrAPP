@@ -1,0 +1,51 @@
+/* Estilos de la pagina de Login */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+ion-content::part(background) {
+    background: white;
+}   
+
+.header {
+    background-color: #012C56;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_login {
+    color: white;
+    font-size: 45px;
+}
+
+.titulo_login strong {
+    color: rgb(255, 183, 27);
+    font-weight: bold;
+}
+
+.inputs {
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.btn_ingresar {
+    --background: rgb(255, 183, 27);
+    --color: white;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    width: 100%;
+}
+
+.btn_recuperar {
+    width: 100%;
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
